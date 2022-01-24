@@ -1,8 +1,16 @@
 import './book-single.scss';
 import PropTypes from 'prop-types';
 
-const BookSingle = ({ title }) => <li>{title}</li>;
+const BookSingle = (book) => {
+  const {
+    book: { title },
+  } = book;
 
-BookSingle.propTypes = { title: PropTypes.string.isRequired };
+  return <li>{title}</li>;
+};
+
+BookSingle.propTypes = {
+  book: PropTypes.shape({ title: PropTypes.string }).isRequired,
+};
 
 export default BookSingle;
