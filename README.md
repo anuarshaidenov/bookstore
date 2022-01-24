@@ -18,17 +18,13 @@ Remove a selected book.
 
 ### Netlify
 
-[Netlify Live Demo Link](https://keen-wozniak-e38afe.netlify.app/)
-
-### Heroku
-
-[Heroku Live Demo Link](https://anuar-math-magicians.herokuapp.com/)
+[Live Demo Link](livedemo.link)
 
 ## Installation
 
 Go to your terminal, navigate to your working directory and run
 
-`git clone https://github.com/anuarshaidenov/math-magicians.git`
+`git clone https://github.com/anuarshaidenov/bookstore.git`
 
 After that navigate to the newly created folder
 
