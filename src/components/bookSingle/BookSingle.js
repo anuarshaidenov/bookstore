@@ -6,7 +6,12 @@ const BookSingle = (book) => {
     book: { title },
   } = book;
 
-  return <li>{title}</li>;
+  return (
+    <li>
+      {title}
+      <button type="button">remove</button>
+    </li>
+  );
 };
 
 BookSingle.propTypes = {
