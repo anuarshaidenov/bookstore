@@ -4,7 +4,7 @@ const REMOVE_BOOK = 'book/removeBook';
 const initialState = [
   {
     id: 1,
-    name: 'harry potter',
+    title: 'harry potter',
   },
 ];
 
