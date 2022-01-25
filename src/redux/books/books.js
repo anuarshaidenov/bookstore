@@ -1,12 +1,17 @@
-const ADD_BOOK = 'book/addBook';
-const REMOVE_BOOK = 'book/removeBook';
+const ADD_BOOK = 'bookStore/books/ADD_BOOK';
+const REMOVE_BOOK = 'bookStore/books/REMOVE_BOOK';
 
-const initialState = [
-  {
-    id: 1,
-    title: 'harry potter',
-  },
-];
+const initialState = [];
+
+export const addBook = (payload) => ({
+  type: ADD_BOOK,
+  payload,
+});
+
+export const removeBook = (payload) => ({
+  type: REMOVE_BOOK,
+  payload,
+});
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {

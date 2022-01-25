@@ -9,8 +9,9 @@ const BookList = () => {
 
   return (
     <ul>
-      {books.length
-        && books.map((book) => <BookSingle key={book.id} book={book} />)}
+      {!books.length
+        ? 'No books found'
+        : books.map((book) => <BookSingle key={book.id} book={book} />)}
     </ul>
   );
 };
