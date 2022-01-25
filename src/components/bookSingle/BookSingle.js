@@ -1,18 +1,19 @@
+/* eslint-disable camelcase */
 import './book-single.scss';
 
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
-import { removeBook } from '../../redux/books/books';
+import { removeBook } from '../../redux/books/thunk';
 
 const BookSingle = (book) => {
   const {
-    book: { id, title },
+    book: { item_id, title },
   } = book;
 
   const dispatch = useDispatch();
 
   const handleRemoveBook = () => {
-    dispatch(removeBook(id));
+    dispatch(removeBook(item_id));
   };
 
   return (
