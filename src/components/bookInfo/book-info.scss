@@ -1,0 +1,56 @@
+@use '../../styles/colors';
+@use '../../styles/fonts';
+
+@mixin book-link {
+  font-family: 'Roboto Slab', serif;
+  font-size: fonts.$font-book-secondary;
+  color: colors.$color-blue-secondary;
+}
+
+$color-book-action-hover: lighten(colors.$color-blue-secondary, 15%);
+
+.book-info {
+  &__category {
+    font-size: fonts.$font-book-secondary;
+    font-weight: 700;
+    color: colors.$color-grey;
+    margin-bottom: 0.25rem;
+  }
+
+  &__title {
+    font-family: 'Roboto Slab', serif;
+    font-size: fonts.$font-book-title;
+    font-weight: 700;
+    text-transform: capitalize;
+  }
+
+  &__author {
+    @include book-link;
+    margin-bottom: 1.125rem;
+  }
+
+  &__actions {
+    display: flex;
+  }
+
+  &__action {
+    @include book-link;
+
+    &:hover {
+      color: $color-book-action-hover;
+    }
+  }
+
+  &__li {
+    padding: 0 0.9rem;
+    border-right: 1px solid colors.$color-white-tertiary;
+
+    &:first-child {
+      padding-left: 0;
+    }
+
+    &:last-child {
+      border-right: none;
+    }
+  }
+}
