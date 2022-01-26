@@ -1,0 +1,28 @@
+@use '../../styles/colors';
+@use '../../styles/fonts';
+
+.book-progress {
+  padding-right: 5rem;
+  border-right: 1px solid colors.$color-white-tertiary;
+  display: flex;
+  align-items: center;
+  gap: 1.375rem;
+
+  &__progress-bar {
+    width: 4.25rem;
+  }
+
+  &__progress-info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__percent {
+    font-size: fonts.$font-book-progress;
+  }
+
+  &__completed {
+    font-size: fonts.$font-book-secondary;
+    color: rgba(colors.$color-black-tertiary, 0.4);
+  }
+}
