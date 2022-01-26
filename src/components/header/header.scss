@@ -11,6 +11,8 @@
     aspect-ratio: 1/1;
     border: solid 1px colors.$color-white-tertiary;
     border-radius: 50%;
+    display: grid;
+    place-items: center;
   }
 
   .container {

@@ -1,6 +1,9 @@
 import './header.scss';
 import { NavLink } from 'react-router-dom';
 
+import { BsFillPersonFill } from 'react-icons/bs';
+import { IconContext } from 'react-icons';
+
 const Header = () => (
   <header className="header">
     <div className="container">
@@ -21,7 +24,11 @@ const Header = () => (
           </li>
         </ul>
       </nav>
-      <span className="header__profile" />
+      <IconContext.Provider value={{ color: '#0290ff', size: '1rem' }}>
+        <span className="header__profile">
+          <BsFillPersonFill />
+        </span>
+      </IconContext.Provider>
     </div>
   </header>
 );
