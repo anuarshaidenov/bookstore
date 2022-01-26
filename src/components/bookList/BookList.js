@@ -15,7 +15,7 @@ const BookList = () => {
   }, []);
 
   return (
-    <ul>
+    <ul className="book-list">
       {!books.length
         ? 'No books found'
         : books.map((book) => <BookSingle key={book.item_id} book={book} />)}
