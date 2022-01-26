@@ -1,3 +1,6 @@
+@use './colors';
+@use './fonts';
+
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Slab:wght@300;700&display=swap');
 
 *,
@@ -11,6 +14,7 @@
 body {
   font-family: 'Montserrat', sans-serif;
   font-size: 16px;
+  background-color: colors.$color-grey-bg;
 }
 
 button {
@@ -18,4 +22,25 @@ button {
   background-color: transparent;
   border: 0;
   cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  width: 95%;
+  max-width: 75rem;
+  margin: 0 auto;
+}
+
+.logo {
+  color: colors.$color-blue-primary;
+  font-size: fonts.$font-logo;
+  font-weight: 700;
 }

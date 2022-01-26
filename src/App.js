@@ -9,10 +9,12 @@ function App() {
   return (
     <div>
       <Header />
-      <Routes>
-        <Route path="/" element={<Books />} />
-        <Route path="categories" element={<Categories />} />
-      </Routes>
+      <main className="container">
+        <Routes>
+          <Route path="/" element={<Books />} />
+          <Route path="categories" element={<Categories />} />
+        </Routes>
+      </main>
     </div>
   );
 }
