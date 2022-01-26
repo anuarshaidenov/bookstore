@@ -34,12 +34,14 @@ const AddBook = () => {
         onChange={handleTitleChange}
         name="title"
         placeholder="Book title"
+        required
       />
       <select
         value={category}
         className="add-book__input add-book__input--category"
         onChange={handleCategoryChange}
         name="category"
+        required
       >
         <option value="">Please select a category</option>
         <option value="Fiction">Fiction</option>
