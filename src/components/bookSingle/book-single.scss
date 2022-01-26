@@ -1,3 +1,17 @@
+@use '../../styles/colors';
+@use '../../styles/fonts';
+
 .book-single {
-  padding: 0;
+  padding: 2rem 1.7rem;
+  border: 1px solid colors.$color-white-tertiary;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 67%;
+  }
 }
