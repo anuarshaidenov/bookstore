@@ -1,5 +1,7 @@
+@use './typography';
 @use './colors';
 @use './fonts';
+@use './buttons';
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Slab:wght@300;700&display=swap');
 
@@ -33,14 +35,16 @@ ul {
   list-style: none;
 }
 
+input {
+  font-family: inherit;
+}
+
+span {
+  display: block;
+}
+
 .container {
   width: 95%;
   max-width: 75rem;
   margin: 0 auto;
-}
-
-.logo {
-  color: colors.$color-blue-primary;
-  font-size: fonts.$font-logo;
-  font-weight: 700;
 }

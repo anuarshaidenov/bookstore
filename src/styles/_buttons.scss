@@ -1,0 +1,28 @@
+@use '../styles/fonts';
+@use '../styles/colors';
+
+$color-primary-hover: darken(colors.$color-blue-primary, 5%);
+
+@mixin button-base {
+  background-color: colors.$color-blue-primary;
+  font-family: 'Roboto Slab', serif;
+  text-transform: uppercase;
+  color: #fff;
+  border-radius: 3px;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: $color-primary-hover;
+  }
+}
+
+.btn-primary {
+  padding: 0.8rem 1rem;
+  font-weight: 700;
+  @include button-base;
+}
+
+.btn-secondary {
+  padding: 0.5rem 1.325rem;
+  @include button-base;
+}

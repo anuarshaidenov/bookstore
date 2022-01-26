@@ -31,6 +31,11 @@
     font-size: fonts.$font-header-link;
     text-transform: uppercase;
     color: rgba(colors.$color-black-tertiary, 0.3);
+    letter-spacing: 1.9px;
+
+    &:hover {
+      color: rgba(colors.$color-black-tertiary, 0.5);
+    }
 
     &.active {
       color: colors.$color-black-tertiary;
