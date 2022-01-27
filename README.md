@@ -6,8 +6,7 @@ Display a list of books.
 Add a book.
 Remove a selected book.
 
-![screenshot](./screenshot-1.png)
-![screenshot](./screenshot-2.png)
+![screenshot](./screenshot.png)
 
 ## Built With
 
@@ -16,9 +15,7 @@ Remove a selected book.
 
 ## Live Demo
 
-### Netlify
-
-[Live Demo Link](livedemo.link)
+[Live Demo Link](https://bookstore-anuar.herokuapp.com/)
 
 ## Installation
 
@@ -28,7 +25,7 @@ Go to your terminal, navigate to your working directory and run
 
 After that navigate to the newly created folder
 
-`cd math-magicians`
+`cd bookstore`
 
 You now have access to the files.
 To install necessary dependencies run
