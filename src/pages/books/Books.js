@@ -4,9 +4,9 @@ import AddBook from '../../components/addBook/AddBook';
 import BookList from '../../components/bookList/BookList';
 
 const Books = () => (
-  <div>
-    <h1>books</h1>
+  <div className="books">
     <BookList />
+    <h2 className="heading books__heading">Add new book</h2>
     <AddBook />
   </div>
 );

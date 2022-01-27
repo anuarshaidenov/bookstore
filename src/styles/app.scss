@@ -1,0 +1,77 @@
+@use './typography';
+@use './colors';
+@use './fonts';
+@use './buttons';
+@use './helpers';
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Slab:wght@300;700&display=swap');
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  background-color: colors.$color-grey-bg;
+}
+
+button {
+  font-family: inherit;
+  font-size: inherit;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+input {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+span {
+  display: block;
+}
+
+select {
+  // A reset of styles, including removing the default dropdown arrow
+  appearance: none;
+  // Additional resets for further consistency
+  background-color: transparent;
+  border: none;
+  width: 100%;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: inherit;
+  line-height: inherit;
+  outline: none;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  &::-ms-expand {
+    display: none;
+  }
+}
+
+.container {
+  width: 95%;
+  max-width: 75rem;
+  margin: 0 auto;
+}

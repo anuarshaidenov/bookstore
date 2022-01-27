@@ -1,0 +1,46 @@
+@use '../../styles/fonts';
+@use '../../styles/colors';
+
+.header {
+  padding: 1.5rem 0;
+  border-bottom: 1px solid colors.$color-white-tertiary;
+  background-color: #fff;
+
+  &__profile {
+    width: 2.8rem;
+    aspect-ratio: 1/1;
+    border: solid 1px colors.$color-white-tertiary;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.nav {
+  &__elements {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+  }
+
+  &__link {
+    font-size: fonts.$font-header-link;
+    text-transform: uppercase;
+    color: rgba(colors.$color-black-tertiary, 0.3);
+    letter-spacing: 1.9px;
+
+    &:hover {
+      color: rgba(colors.$color-black-tertiary, 0.5);
+    }
+
+    &.active {
+      color: colors.$color-black-tertiary;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+@use '../../styles/colors';
+
+.book-chapter {
+  padding-left: 3.65rem;
+
+  &__current {
+    font-family: 'Roboto Slab', serif;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    color: rgba(colors.$color-black-tertiary, 0.4);
+    margin-bottom: 0.4rem;
+  }
+
+  &__number {
+    font-size: 1rem;
+    color: colors.$color-black-tertiary;
+    margin-bottom: 1.4rem;
+  }
+}

@@ -13,6 +13,7 @@ const AddBook = () => {
   const dispatch = useDispatch();
 
   const clearInputTitle = () => setTitle('');
+  const clearInputCategory = () => setCategory('');
 
   const handleTitleChange = (e) => setTitle(e.target.value);
   const handleCategoryChange = (e) => setCategory(e.target.value);
@@ -23,23 +24,34 @@ const AddBook = () => {
     const newBook = { item_id: uuidv4(), title, category };
     dispatch(addBook(newBook));
     clearInputTitle();
+    clearInputCategory();
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className="add-book">
       <input
+        className="add-book__input add-book__input--title"
         type="text"
         value={title}
         onChange={handleTitleChange}
         name="title"
-        placeholder="Book Title"
+        placeholder="Book title"
+        required
       />
-      <select value={category} onChange={handleCategoryChange} name="category">
+      <select
+        value={category}
+        className="add-book__input add-book__input--category"
+        onChange={handleCategoryChange}
+        name="category"
+        required
+      >
         <option value="">Please select a category</option>
         <option value="Fiction">Fiction</option>
         <option value="Romance">Romance</option>
       </select>
-      <button type="submit">Add book</button>
+      <button className="btn-primary add-book__btn" type="submit">
+        Add book
+      </button>
     </form>
   );
 };

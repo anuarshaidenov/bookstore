@@ -4,12 +4,11 @@ import './book-single.scss';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { removeBook } from '../../redux/books/thunk';
+import BookInfo from '../bookInfo/BookInfo';
+import BookProgress from '../bookProgress/BookProgress';
+import BookChapter from '../bookChapter/BookChapter';
 
-const BookSingle = (book) => {
-  const {
-    book: { item_id, title },
-  } = book;
-
+const BookSingle = ({ book: { item_id, title, category } }) => {
   const dispatch = useDispatch();
 
   const handleRemoveBook = () => {
@@ -17,18 +16,26 @@ const BookSingle = (book) => {
   };
 
   return (
-    <li>
-      {title}
-      <button onClick={handleRemoveBook} type="button">
-        remove
-      </button>
+    <li className="book-single">
+      <div className="book-single__info">
+        <BookInfo
+          category={category}
+          title={title}
+          handleRemoveBook={handleRemoveBook}
+        />
+        <BookProgress progress={64} />
+      </div>
+      <BookChapter />
     </li>
   );
 };
 
 BookSingle.propTypes = {
-  book: PropTypes.shape({ id: PropTypes.string, title: PropTypes.string })
-    .isRequired,
+  book: PropTypes.shape({
+    item_id: PropTypes.string,
+    title: PropTypes.string,
+    category: PropTypes.string,
+  }).isRequired,
 };
 
 export default BookSingle;

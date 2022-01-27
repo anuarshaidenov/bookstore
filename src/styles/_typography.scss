@@ -1,0 +1,14 @@
+@use '../styles/fonts';
+@use '../styles/colors';
+
+.logo {
+  color: colors.$color-blue-primary;
+  font-size: fonts.$font-logo;
+  font-weight: 700;
+}
+
+.heading {
+  font-size: fonts.$font-heading;
+  text-transform: uppercase;
+  color: colors.$color-grey;
+}

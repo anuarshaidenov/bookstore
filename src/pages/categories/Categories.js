@@ -1,7 +1,7 @@
 import './categories.scss';
 
 const Categories = () => (
-  <div>
+  <div className="categories">
     <h1>Under construction</h1>
   </div>
 );

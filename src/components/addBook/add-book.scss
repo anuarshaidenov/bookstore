@@ -1,3 +1,33 @@
+@use '../../styles/colors';
+
 .add-book {
-  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 2.125rem;
+
+  &__input {
+    padding: 0.8rem 1rem;
+    border: 1px solid colors.$color-white-tertiary;
+    border-radius: 4px;
+
+    &:focus {
+      outline: none;
+    }
+
+    &--title {
+      width: 55%;
+      display: grid;
+    }
+
+    &--category {
+      width: 24%;
+      background-color: #fff;
+      color: colors.$color-grey;
+      cursor: pointer;
+    }
+  }
+
+  &__btn {
+    flex: 1;
+  }
 }
