@@ -6,4 +6,10 @@
   gap: 0.9rem;
   padding-bottom: 2.5rem;
   border-bottom: 1px solid colors.$color-white-tertiary;
+
+  &__message {
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: 700;
+  }
 }

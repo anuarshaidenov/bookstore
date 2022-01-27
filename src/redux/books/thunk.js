@@ -1,8 +1,14 @@
-import { getBooksAction, addBookAction, removeBookAction } from './books';
+import {
+  getBooksAction,
+  addBookAction,
+  removeBookAction,
+  loadBooksAction,
+} from './books';
 
 const baseURL = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/ZZ0zy3Vi7YsuPgssital/books';
 
 export const getBooks = () => async (dispatch) => {
+  dispatch(loadBooksAction(true));
   const res = await fetch(baseURL);
   const data = await res.json();
 
@@ -14,6 +20,7 @@ export const getBooks = () => async (dispatch) => {
       title,
     };
   });
+  dispatch(loadBooksAction(false));
   dispatch(getBooksAction(books));
 };
 
