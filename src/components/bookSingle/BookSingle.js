@@ -8,11 +8,7 @@ import BookInfo from '../bookInfo/BookInfo';
 import BookProgress from '../bookProgress/BookProgress';
 import BookChapter from '../bookChapter/BookChapter';
 
-const BookSingle = (book) => {
-  const {
-    book: { item_id, title, category },
-  } = book;
-
+const BookSingle = ({ book: { item_id, title, category } }) => {
   const dispatch = useDispatch();
 
   const handleRemoveBook = () => {
@@ -35,8 +31,11 @@ const BookSingle = (book) => {
 };
 
 BookSingle.propTypes = {
-  book: PropTypes.shape({ id: PropTypes.string, title: PropTypes.string })
-    .isRequired,
+  book: PropTypes.shape({
+    item_id: PropTypes.string,
+    title: PropTypes.string,
+    category: PropTypes.string,
+  }).isRequired,
 };
 
 export default BookSingle;

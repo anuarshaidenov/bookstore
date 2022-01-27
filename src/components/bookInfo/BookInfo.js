@@ -9,7 +9,7 @@ const BookInfo = ({ category, title, handleRemoveBook }) => (
     <span className="book-info__author">Author</span>
     <ul className="book-info__actions">
       <li className="book-info__li">
-        <span className="book-info__action">Comments</span>
+        <span className="book-info__action not-allowed">Comments</span>
       </li>
       <li className="book-info__li">
         <button
@@ -21,7 +21,7 @@ const BookInfo = ({ category, title, handleRemoveBook }) => (
         </button>
       </li>
       <li className="book-info__li">
-        <span className="book-info__action">Edit</span>
+        <span className="book-info__action not-allowed">Edit</span>
       </li>
     </ul>
   </div>
