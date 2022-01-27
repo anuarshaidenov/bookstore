@@ -36,6 +36,7 @@ const AddBook = () => {
         onChange={handleTitleChange}
         name="title"
         placeholder="Book title"
+        maxLength={40}
         required
       />
       <select
