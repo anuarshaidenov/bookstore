@@ -16,12 +16,14 @@
 
     &--title {
       width: 55%;
+      display: grid;
     }
 
     &--category {
-      font-family: inherit;
       width: 24%;
+      background-color: #fff;
       color: colors.$color-grey;
+      cursor: pointer;
     }
   }
 

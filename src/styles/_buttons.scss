@@ -24,5 +24,6 @@ $color-primary-hover: darken(colors.$color-blue-primary, 5%);
 
 .btn-secondary {
   padding: 0.5rem 1.325rem;
+  font-size: fonts.$font-header-link;
   @include button-base;
 }

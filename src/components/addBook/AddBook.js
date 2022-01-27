@@ -13,6 +13,7 @@ const AddBook = () => {
   const dispatch = useDispatch();
 
   const clearInputTitle = () => setTitle('');
+  const clearInputCategory = () => setCategory('');
 
   const handleTitleChange = (e) => setTitle(e.target.value);
   const handleCategoryChange = (e) => setCategory(e.target.value);
@@ -23,6 +24,7 @@ const AddBook = () => {
     const newBook = { item_id: uuidv4(), title, category };
     dispatch(addBook(newBook));
     clearInputTitle();
+    clearInputCategory();
   };
 
   return (
