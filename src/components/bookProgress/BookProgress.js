@@ -4,14 +4,13 @@ import 'react-circular-progressbar/dist/styles.css';
 import PropTypes from 'prop-types';
 
 import './book-progress.scss';
+import executeAfterTime from '../../utils/utils';
 
 const BookProgress = ({ progress }) => {
   const [percentageValue, setPercentageValue] = useState(0);
 
   useEffect(() => {
-    setTimeout(() => {
-      setPercentageValue(progress);
-    }, 500);
+    executeAfterTime(setPercentageValue, progress, 500);
   }, []);
 
   return (
