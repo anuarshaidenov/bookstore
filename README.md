@@ -12,6 +12,7 @@ Remove a selected book.
 
 - ReactJS
 - Redux
+- Sass
 
 ## Live Demo
 
